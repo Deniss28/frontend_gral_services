@@ -1,0 +1,28 @@
+.hero {
+  margin-top: 3rem;
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero__container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hero__img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__img {
+    width: auto;
+  }
+}

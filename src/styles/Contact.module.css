@@ -1,0 +1,98 @@
+.contact {
+  background-color: #373737f3;
+  margin-top: 3rem;
+  padding: 5rem;
+}
+
+.contact__container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact__grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__img {
+  width: 45rem;
+}
+
+@media screen and (max-width: 600px) {
+  .contact__img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* form */
+
+.contact__form {
+  width: 340px;
+  height: 500px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh - 220px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+input:focus {
+  border-bottom: 2px solid #78788c;
+}
+p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  background: #78788c;
+  color: #fff;
+}
+
+/* error */
+.error {
+  color: rgb(210, 74, 74);
+}

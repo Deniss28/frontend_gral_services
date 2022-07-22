@@ -1,0 +1,23 @@
+.servicios {
+  background-color: #d7d5d5;
+  margin-top: 3rem;
+  padding: 5rem;
+}
+
+.servicios__container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.galeria__grid {
+  display: grid;
+  padding: 4rem;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 760px) {
+  .galeria__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
