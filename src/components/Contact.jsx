@@ -26,28 +26,29 @@ const Contact = () => {
 
     // ****
     if (send) {
-      toast.success(send.msg)
-      setName('')
-      setEmail('')
-      setMessage('')
+      toast.success(send.msg);
+      setName("")
+      setEmail("")
+      setMessage("")
       setSend()
     }
-  }, [name, email, message, send])
+  }, [name, email, message, send]);
 
-
-  //! enviar data
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setButtonLoading(true);
     if (!nameError & !emailError & !messageError) {
-      SendEmail({ name, email, message, setSend }).then(() => {
-        setButtonLoading(false);
-      })
+      SendEmail({ name, email, message, setSend }).then(
+        () => {
+          setButtonLoading(false);
+        }
+      );
     }
-  }
+  };
 
   return (
     <>
+      <Toast />
       <section className={styles.contact}>
         <div className={styles.contact__container}>
           <div className={styles.contact__grid}>
@@ -95,7 +96,7 @@ const Contact = () => {
                   <button
                     type='submit'
                     disabled={buttonLoading && true}
-                  >{buttonLoading ? "Cargando..." : "Enviado"}</button>
+                  >{buttonLoading ? "Cargando..." : "Enviar"}</button>
                 </div>
               </form>
             </div>
